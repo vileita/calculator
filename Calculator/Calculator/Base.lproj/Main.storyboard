@@ -216,6 +216,9 @@
                             <constraint firstItem="TWi-LL-RjA" firstAttribute="height" secondItem="hes-1R-hSL" secondAttribute="height" id="x6n-c8-X2E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="gIO-Fr-uT8" id="9fE-cK-QDV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
