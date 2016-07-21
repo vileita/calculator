@@ -12,6 +12,7 @@ enum modes {
     case NOT_SET
     case ADDITION
     case SUBTRACTIOIN
+    case MULTIPLICATION
 }
 
 class ViewController: UIViewController {
@@ -39,6 +40,11 @@ class ViewController: UIViewController {
     @IBAction func tappedMinus(sender: AnyObject) {
         changeMode(modes.SUBTRACTIOIN)
     }
+    @IBAction func tappedMultiply(sender: AnyObject) {
+        changeMode(modes.MULTIPLICATION)
+    }
+  
+    
     @IBAction func tappedEquals(sender: AnyObject) {
         guard let num:Int = Int(labelString) else {
             return
@@ -51,6 +57,9 @@ class ViewController: UIViewController {
         }
         else if currentMode == modes.SUBTRACTIOIN {
             savedNum -= num
+        }
+        if currentMode == modes.MULTIPLICATION {
+            savedNum *= num
         }
         currentMode == modes.NOT_SET
         labelString = "\(savedNum)"
@@ -89,7 +98,7 @@ class ViewController: UIViewController {
         let formatter:NSNumberFormatter = NSNumberFormatter()
         formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
         let num:NSNumber = NSNumber(integer: labelInt)
-        label.text = formatter.stringFromNumber(num)   
+        label.text = formatter.stringFromNumber(num)
     }
     
     func changeMode(newMode:modes) {

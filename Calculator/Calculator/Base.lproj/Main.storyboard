@@ -141,12 +141,22 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNg-wR-a4I">
-                                <rect key="frame" x="452" y="344" width="140" height="248"/>
+                                <rect key="frame" x="452" y="472" width="140" height="120"/>
                                 <color key="backgroundColor" red="0.99294420811518325" green="0.81220664573879464" blue="0.21614590068207895" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="="/>
                                 <connections>
                                     <action selector="tappedEquals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cz2-7P-9gq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9b-uT-C9J">
+                                <rect key="frame" x="452" y="344" width="140" height="120"/>
+                                <color key="backgroundColor" red="0.99294420809999995" green="0.81220664570000001" blue="0.2161459007" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="tappedEquals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9s-Qx-q9h"/>
+                                    <action selector="tappedMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgP-jd-8QL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,16 +170,22 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lNq-V6-snN" secondAttribute="bottom" constant="8" id="6KY-iE-eDH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lNg-wR-a4I" secondAttribute="bottom" constant="8" id="6L2-XO-2el"/>
                             <constraint firstItem="QeB-lD-6WI" firstAttribute="top" secondItem="ze1-yF-01p" secondAttribute="bottom" constant="8" id="7Ir-5A-oaJ"/>
+                            <constraint firstItem="lNg-wR-a4I" firstAttribute="height" secondItem="fk3-mb-7JS" secondAttribute="height" id="7wv-6f-2EK"/>
                             <constraint firstItem="ZBM-0t-wGm" firstAttribute="height" secondItem="hes-1R-hSL" secondAttribute="height" id="8Kz-ep-7OM"/>
+                            <constraint firstItem="lNg-wR-a4I" firstAttribute="width" secondItem="fk3-mb-7JS" secondAttribute="width" id="9Or-pz-fWZ"/>
                             <constraint firstItem="rPC-10-BeD" firstAttribute="width" secondItem="hes-1R-hSL" secondAttribute="width" id="A6b-pU-Ha2"/>
                             <constraint firstItem="JfZ-eO-553" firstAttribute="height" secondItem="hes-1R-hSL" secondAttribute="height" id="Ad2-rn-gmU"/>
                             <constraint firstItem="rPC-10-BeD" firstAttribute="top" secondItem="gIO-Fr-uT8" secondAttribute="bottom" constant="8" id="BJm-SL-KFK"/>
                             <constraint firstItem="ZvV-iH-04K" firstAttribute="height" secondItem="hes-1R-hSL" secondAttribute="height" id="BiR-qq-bUc"/>
+                            <constraint firstItem="C9b-uT-C9J" firstAttribute="width" secondItem="fk3-mb-7JS" secondAttribute="width" id="BqX-qK-114"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QeB-lD-6WI" secondAttribute="bottom" constant="8" id="CVv-3d-eod"/>
                             <constraint firstItem="gIO-Fr-uT8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Gj0-Eh-uZD"/>
                             <constraint firstItem="FT4-0q-tii" firstAttribute="top" secondItem="gIO-Fr-uT8" secondAttribute="bottom" constant="8" id="H6D-Fd-m4k"/>
                             <constraint firstItem="rPC-10-BeD" firstAttribute="height" secondItem="hes-1R-hSL" secondAttribute="height" id="Jlp-49-2C4"/>
+                            <constraint firstItem="fk3-mb-7JS" firstAttribute="leading" secondItem="TWi-LL-RjA" secondAttribute="trailing" constant="8" id="Kem-8A-y5w"/>
+                            <constraint firstItem="lNg-wR-a4I" firstAttribute="top" secondItem="C9b-uT-C9J" secondAttribute="bottom" constant="8" id="NSv-JY-thN"/>
                             <constraint firstItem="hes-1R-hSL" firstAttribute="top" secondItem="gIO-Fr-uT8" secondAttribute="bottom" constant="8" id="NeT-Jc-phF"/>
+                            <constraint firstItem="lNg-wR-a4I" firstAttribute="leading" secondItem="lNq-V6-snN" secondAttribute="trailing" constant="8" id="O6O-6J-xJ0"/>
                             <constraint firstItem="Ajv-Qe-smS" firstAttribute="leading" secondItem="rPC-10-BeD" secondAttribute="trailing" constant="8" id="PMK-Sg-wfi"/>
                             <constraint firstItem="fk3-mb-7JS" firstAttribute="width" secondItem="hes-1R-hSL" secondAttribute="width" id="Q2J-y5-kd7"/>
                             <constraint firstItem="lNq-V6-snN" firstAttribute="width" secondItem="hes-1R-hSL" secondAttribute="width" id="QMa-Xg-gFL"/>
@@ -184,9 +200,11 @@
                             <constraint firstItem="TWi-LL-RjA" firstAttribute="top" secondItem="JfZ-eO-553" secondAttribute="bottom" constant="8" id="XOI-ze-cRm"/>
                             <constraint firstAttribute="trailing" secondItem="gIO-Fr-uT8" secondAttribute="trailing" constant="20" id="Y8H-nh-nt4"/>
                             <constraint firstItem="ZBM-0t-wGm" firstAttribute="width" secondItem="hes-1R-hSL" secondAttribute="width" id="YZY-sx-z8p"/>
+                            <constraint firstAttribute="trailing" secondItem="C9b-uT-C9J" secondAttribute="trailing" constant="8" id="aKn-Vi-poJ"/>
                             <constraint firstItem="ze1-yF-01p" firstAttribute="height" secondItem="hes-1R-hSL" secondAttribute="height" id="b3t-oS-BOJ"/>
-                            <constraint firstItem="lNg-wR-a4I" firstAttribute="top" secondItem="ZvV-iH-04K" secondAttribute="bottom" constant="8" id="bIN-1q-sKC"/>
                             <constraint firstItem="lNq-V6-snN" firstAttribute="leading" secondItem="QeB-lD-6WI" secondAttribute="trailing" constant="8" id="ccd-U2-apU"/>
+                            <constraint firstItem="C9b-uT-C9J" firstAttribute="leading" secondItem="fk3-mb-7JS" secondAttribute="trailing" constant="8" id="d4P-a8-Cqf"/>
+                            <constraint firstItem="C9b-uT-C9J" firstAttribute="top" secondItem="ZvV-iH-04K" secondAttribute="bottom" constant="8" id="dNX-ak-x36"/>
                             <constraint firstAttribute="trailing" secondItem="lNg-wR-a4I" secondAttribute="trailing" constant="8" id="dZ5-wr-uMD"/>
                             <constraint firstItem="ZvV-iH-04K" firstAttribute="leading" secondItem="ZBM-0t-wGm" secondAttribute="trailing" constant="8" id="daV-zn-6lk"/>
                             <constraint firstItem="lNg-wR-a4I" firstAttribute="width" secondItem="hes-1R-hSL" secondAttribute="width" id="eaQ-QF-4ic"/>
@@ -194,12 +212,15 @@
                             <constraint firstItem="ZBM-0t-wGm" firstAttribute="top" secondItem="Ajv-Qe-smS" secondAttribute="bottom" constant="8" id="eqG-fd-kBu"/>
                             <constraint firstItem="FT4-0q-tii" firstAttribute="leading" secondItem="Ajv-Qe-smS" secondAttribute="trailing" constant="8" id="fGL-vy-1XO"/>
                             <constraint firstItem="lNq-V6-snN" firstAttribute="top" secondItem="fk3-mb-7JS" secondAttribute="bottom" constant="8" id="fYR-BW-vJY"/>
+                            <constraint firstItem="C9b-uT-C9J" firstAttribute="height" secondItem="fk3-mb-7JS" secondAttribute="height" id="fbC-X9-aZG"/>
                             <constraint firstItem="FT4-0q-tii" firstAttribute="width" secondItem="hes-1R-hSL" secondAttribute="width" id="fpf-1i-mTF"/>
                             <constraint firstItem="Ajv-Qe-smS" firstAttribute="top" secondItem="gIO-Fr-uT8" secondAttribute="bottom" constant="8" id="gA7-N4-kRz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lNg-wR-a4I" secondAttribute="bottom" constant="8" id="grq-u2-b3f"/>
                             <constraint firstItem="lNq-V6-snN" firstAttribute="height" secondItem="hes-1R-hSL" secondAttribute="height" id="hLC-1f-vQa"/>
                             <constraint firstItem="gIO-Fr-uT8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="hR4-S2-xRx"/>
                             <constraint firstItem="QeB-lD-6WI" firstAttribute="height" secondItem="hes-1R-hSL" secondAttribute="height" id="i3x-1N-ozg"/>
                             <constraint firstItem="rRJ-FM-DXC" firstAttribute="top" secondItem="hes-1R-hSL" secondAttribute="bottom" constant="8" id="iDt-3b-0ut"/>
+                            <constraint firstItem="fk3-mb-7JS" firstAttribute="top" secondItem="ZBM-0t-wGm" secondAttribute="bottom" constant="8" id="ipC-6a-yG3"/>
                             <constraint firstItem="ze1-yF-01p" firstAttribute="top" secondItem="rRJ-FM-DXC" secondAttribute="bottom" constant="8" id="l5F-kC-7dx"/>
                             <constraint firstItem="hes-1R-hSL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="lcN-kE-nqB"/>
                             <constraint firstItem="ze1-yF-01p" firstAttribute="width" secondItem="hes-1R-hSL" secondAttribute="width" id="lxf-lf-rs2"/>
@@ -211,9 +232,11 @@
                             <constraint firstItem="rPC-10-BeD" firstAttribute="leading" secondItem="hes-1R-hSL" secondAttribute="trailing" constant="8" id="q8O-8j-owH"/>
                             <constraint firstItem="Ajv-Qe-smS" firstAttribute="height" secondItem="hes-1R-hSL" secondAttribute="height" id="rfZ-Rk-ah2"/>
                             <constraint firstItem="lNg-wR-a4I" firstAttribute="leading" secondItem="lNq-V6-snN" secondAttribute="trailing" constant="8" id="ruc-LA-dD8"/>
+                            <constraint firstItem="lNq-V6-snN" firstAttribute="top" secondItem="fk3-mb-7JS" secondAttribute="bottom" constant="8" id="tNy-9C-Sbe"/>
                             <constraint firstItem="JfZ-eO-553" firstAttribute="width" secondItem="hes-1R-hSL" secondAttribute="width" id="wfs-7p-a0O"/>
                             <constraint firstItem="ZvV-iH-04K" firstAttribute="top" secondItem="FT4-0q-tii" secondAttribute="bottom" constant="8" id="wjZ-XN-cCt"/>
                             <constraint firstItem="TWi-LL-RjA" firstAttribute="height" secondItem="hes-1R-hSL" secondAttribute="height" id="x6n-c8-X2E"/>
+                            <constraint firstAttribute="trailing" secondItem="lNg-wR-a4I" secondAttribute="trailing" constant="8" id="ysv-LB-yww"/>
                         </constraints>
                     </view>
                     <connections>
