@@ -34,12 +34,28 @@ class ViewController: UIViewController {
     @IBAction func tapped9(sender: AnyObject) {tappedNumber(9)}
     
     @IBAction func tappedPlus(sender: AnyObject) {
-        changeMode(modes:ADDITION)
+        changeMode(modes.ADDITION)
     }
     @IBAction func tappedMinus(sender: AnyObject) {
-        changeMode(modes:SUBTRACTION)
+        changeMode(modes.SUBTRACTIOIN)
     }
     @IBAction func tappedEquals(sender: AnyObject) {
+        guard let num:Int = Int(labelString) else {
+            return
+        }
+        if currentMode == modes.NOT_SET || lastButtonWasMode {
+            return
+        }
+        if currentMode == modes.ADDITION {
+            savedNum += num
+        }
+        else if currentMode == modes.SUBTRACTIOIN {
+            savedNum -= num
+        }
+        currentMode == modes.NOT_SET
+        labelString = "\(savedNum)"
+        updateText()
+        lastButtonWasMode = true
     }
     @IBAction func tappedClear(sender: AnyObject) {
         savedNum = 0
@@ -48,7 +64,6 @@ class ViewController: UIViewController {
         currentMode = modes.NOT_SET
         lastButtonWasMode = false
         }
-
     
     func tappedNumber(num:Int) {
         if lastButtonWasMode {
@@ -71,7 +86,10 @@ class ViewController: UIViewController {
         if currentMode == modes.NOT_SET {
             savedNum = labelInt
         }
-        label.text = "\(labelInt)"
+        let formatter:NSNumberFormatter = NSNumberFormatter()
+        formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+        let num:NSNumber = NSNumber(integer: labelInt)
+        label.text = formatter.stringFromNumber(num)   
     }
     
     func changeMode(newMode:modes) {
